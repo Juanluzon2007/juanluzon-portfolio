@@ -7,11 +7,11 @@ import type { Metadata } from 'next';
 import MobileNav from '@/components/MobileNav';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.juanluzon.com'), // Reemplaza con tu dominio de Netlify o dominio final
+  metadataBase: new URL('https://juanluzon-portfolio.netlify.app/'),
   title: 'Juan Luzon | Desarrollador de Software y Creador de Contenido',
   description: 'Portafolio de Juan Luzon, estudiante de Ingeniería de Software apasionado por el desarrollo de aplicaciones web con Next.js, React y Tailwind CSS. Descubre mis proyectos y habilidades.',
   keywords: ['Juan Luzon', 'portafolio', 'desarrollador de software', 'ingeniería de software', 'Next.js', 'React', 'TypeScript', 'desarrollador web', 'República Dominicana', 'creador de contenido'],
-  authors: [{ name: 'Juan Luzon', url: 'https://www.juanluzon.com' }],
+  authors: [{ name: 'Juan Luzon', url: 'https://juanluzon-portfolio.netlify.app/' }],
   creator: 'Juan Luzon',
   
   openGraph: {
