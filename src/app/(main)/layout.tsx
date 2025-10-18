@@ -8,9 +8,9 @@ import MobileNav from '@/components/MobileNav';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.juanluzon.com'), // Reemplaza con tu dominio de Netlify o dominio final
-  title: 'Juan Luzon | Portafolio de Desarrollador de Software',
-  description: 'Portafolio de Juan Luzon, estudiante de Ingeniería de Software apasionado por el desarrollo de aplicaciones web. Descubre mis proyectos y habilidades.',
-  keywords: ['Juan Luzon', 'portafolio', 'desarrollador de software', 'ingeniería de software', 'Next.js', 'React', 'TypeScript', 'desarrollador web', 'República Dominicana'],
+  title: 'Juan Luzon | Desarrollador de Software y Creador de Contenido',
+  description: 'Portafolio de Juan Luzon, estudiante de Ingeniería de Software apasionado por el desarrollo de aplicaciones web con Next.js, React y Tailwind CSS. Descubre mis proyectos y habilidades.',
+  keywords: ['Juan Luzon', 'portafolio', 'desarrollador de software', 'ingeniería de software', 'Next.js', 'React', 'TypeScript', 'desarrollador web', 'República Dominicana', 'creador de contenido'],
   authors: [{ name: 'Juan Luzon', url: 'https://www.juanluzon.com' }],
   creator: 'Juan Luzon',
   
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_DO',
     url: '/',
-    title: 'Juan Luzon | Portafolio de Desarrollador de Software',
-    description: 'Explora los proyectos y la experiencia de Juan Luzon, un apasionado estudiante de Ingeniería de Software de República Dominicana.',
+    title: 'Juan Luzon | Desarrollador de Software y Creador de Contenido',
+    description: 'Explora el portafolio de un apasionado estudiante de Ingeniería de Software de República Dominicana, especializado en crear aplicaciones web modernas.',
     siteName: 'Portafolio de Juan Luzon',
     images: [
       {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Juan Luzon | Portafolio de Desarrollador de Software',
+    title: 'Juan Luzon | Desarrollador de Software y Creador de Contenido',
     description: 'Desarrollador de software especializado en aplicaciones web con Next.js y React. Apasionado por la tecnología y la creación de soluciones innovadoras.',
     creator: '@juanluzon_dev',
     images: ['/og-image.png'], // La misma imagen que en Open Graph
