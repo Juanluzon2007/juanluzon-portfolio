@@ -25,7 +25,7 @@ export const projectsData: Project[] = [
     ],
     imageUrl: '/portfolio.png',
     imageHint: 'website screenshot',
-    projectUrl: '#',
+    projectUrl: 'https://juanluzon-portfolio.netlify.app/',
     isFeatured: true,
     es: {
       title: 'Portafolio Personal',
