@@ -20,6 +20,7 @@ export default function HeroSection() {
               src={heroContent.imageUrl}
               alt={content.imageAlt}
               fill
+              priority={true}
               className="object-cover"
               data-ai-hint="man portrait"
               onContextMenu={(e) => e.preventDefault()}

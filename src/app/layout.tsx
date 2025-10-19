@@ -15,12 +15,21 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
+    const handleLoad = () => {
       setLoading(false);
-    }, 2500);
+    };
 
-    return () => clearTimeout(timer);
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      // Fallback to hide loader after a timeout
+      const timer = setTimeout(handleLoad, 4000); 
+      return () => {
+        window.removeEventListener('load', handleLoad);
+        clearTimeout(timer);
+      };
+    }
   }, []);
 
   return (
@@ -32,13 +41,16 @@ export default function RootLayout({
         <title>Juan Luzon | Portafolio</title>
         <meta name="description" content="Portafolio de Juan Luzon, estudiante de Ingeniería de Software apasionado por el desarrollo web." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className="font-body antialiased">
         <LanguageProvider>
           {loading && <LoadingScreen />}
-          <div className={cn("transition-opacity duration-300", loading ? 'opacity-0' : 'opacity-100')}>
+          <div className={cn("transition-opacity duration-500", loading ? 'opacity-0' : 'opacity-100')}>
             <ClientOnly>
               <ToastProvider>
                 {children}

@@ -25,6 +25,7 @@ export default function AboutSection() {
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="rounded-md w-full h-auto"
                 onContextMenu={(e) => e.preventDefault()}
               />
