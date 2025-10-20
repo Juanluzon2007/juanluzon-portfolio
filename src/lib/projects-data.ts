@@ -46,7 +46,7 @@ export const projectsData: Project[] = [
       { name: "CSS", url: "https://developer.mozilla.org/es/docs/Web/CSS" },
       { name: "JavaScript", url: "https://developer.mozilla.org/es/docs/Web/JavaScript" }
     ],
-    imageUrl: 'https://picsum.photos/seed/1/1280/720',
+    imageUrl: '/feliz_cumpleanos.webp',
     imageHint: 'website screenshot of a birthday card',
     projectUrl: 'https://juanluzon2007.github.io/madre/',
     isFeatured: false,
@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
       { name: "CSS3", url: "https://developer.mozilla.org/es/docs/Web/CSS" },
       { name: "JavaScript", url: "https://developer.mozilla.org/es/docs/Web/JavaScript" }
     ],
-    imageUrl: 'https://picsum.photos/seed/2/1280/720',
+    imageUrl: '/cuenta_regresiva.webp',
     imageHint: 'website screenshot of a countdown timer',
     projectUrl: 'https://juanluzon2007.github.io/shiny-barnacle/',
     isFeatured: false,
