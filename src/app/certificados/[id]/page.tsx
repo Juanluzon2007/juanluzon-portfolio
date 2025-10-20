@@ -57,7 +57,6 @@ export default function CertificatePage({ params }: CertificatePageProps) {
           alt={title}
           fill
           className="object-contain rounded-lg shadow-2xl"
-          onContextMenu={(e) => e.preventDefault()}
         />
       </div>
     </main>
