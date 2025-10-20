@@ -19,16 +19,17 @@ export default function RootLayout({
       setLoading(false);
     };
 
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-      // Fallback to hide loader after a timeout
-      const timer = setTimeout(handleLoad, 4000); 
-      return () => {
-        window.removeEventListener('load', handleLoad);
-        clearTimeout(timer);
-      };
+    if (typeof window !== 'undefined') {
+      if (document.readyState === 'complete') {
+        handleLoad();
+      } else {
+        window.addEventListener('load', handleLoad);
+        const timer = setTimeout(handleLoad, 3000);
+        return () => {
+          window.removeEventListener('load', handleLoad);
+          clearTimeout(timer);
+        };
+      }
     }
   }, []);
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <title>Juan Luzon | Portafolio</title>
         <meta name="description" content="Portafolio de Juan Luzon, estudiante de Ingeniería de Software apasionado por el desarrollo web." />
+        <meta name="google-site-verification" content="KqCz5_lnKrgsMQkxNXH4ufSfFWOUSKqcpFW0MQaJJMc" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
