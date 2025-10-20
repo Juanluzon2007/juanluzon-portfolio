@@ -38,18 +38,13 @@ const CertificateCard = ({ certificate }: CertificateCardProps) => {
             <p className="m-0 text-base sm:text-lg font-bold text-white">{currentCertificate.title}</p>
             <p className="mt-2 text-xs text-gray-300 line-clamp-3 px-2">{currentCertificate.description}</p>
             
-            <div className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">
-                <Eye size={12} />
-                {t('certificates.viewButton')}
-            </div>
-
             {href && (
               <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="mt-2 inline-flex items-center gap-2 text-xs text-white/80 hover:text-white transition-colors"
+                className="mt-4 inline-flex items-center gap-2 text-xs text-white/80 hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full"
               >
                 <ExternalLink size={12} />
                 {t('certificates.credentialButton')}

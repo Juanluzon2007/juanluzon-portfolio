@@ -19,7 +19,6 @@ export const translations = {
       featuredTitle: 'Certificados Destacados',
       allTitle: 'Mis Certificados',
       seeAll: 'Ver todos los certificados',
-      viewButton: 'Visualizar',
       credentialButton: 'Ver Credencial Externa',
     },
     footer: {
@@ -47,7 +46,6 @@ export const translations = {
       featuredTitle: 'Featured Certificates',
       allTitle: 'My Certificates',
       seeAll: 'See all certificates',
-      viewButton: 'View',
       credentialButton: 'View External Credential',
     },
     footer: {
