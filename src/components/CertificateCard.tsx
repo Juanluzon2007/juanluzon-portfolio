@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { ExternalLink, Eye } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import type { Certificate } from '@/lib/certificates-data';
-import Link from 'next/link';
 import { useLanguage } from '@/context/language-context';
 
 type CertificateCardProps = {
@@ -10,12 +9,12 @@ type CertificateCardProps = {
 
 const CertificateCard = ({ certificate }: CertificateCardProps) => {
   const { language, t } = useLanguage();
-  const { id, href } = certificate;
+  const { href } = certificate;
   const currentCertificate = certificate[language];
 
   return (
     <div className="w-full flex justify-center">
-      <Link href={`/certificados/${id}`} target="_blank" rel="noopener noreferrer" className="block w-full group">
+      <div className="block w-full group">
         <div
           className="relative rounded-lg flex items-center justify-center overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:scale-105"
           style={{
@@ -52,7 +51,7 @@ const CertificateCard = ({ certificate }: CertificateCardProps) => {
             )}
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
