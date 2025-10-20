@@ -2,7 +2,7 @@
 
 // Contenido para la sección Hero (Inicio)
 export const heroContent = {
-  imageUrl: '/juan.jpg',
+  imageUrl: '/juan.webp',
   contactEmail: 'juanluzonjlt2007@gmail.com',
   es: {
     available: 'Disponible para trabajar',
