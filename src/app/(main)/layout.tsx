@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Portafolio de Juan Luzon',
     images: [
       {
-        url: '/og-image.png', // Asegúrate de tener una imagen en public/og-image.png (1200x630px)
+        url: '/og-image.webp', // Asegúrate de tener una imagen en public/og-image.webp (1200x630px)
         width: 1200,
         height: 630,
         alt: 'Juan Luzon - Portafolio de Desarrollador de Software',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Juan Luzon | Desarrollador de Software y Creador de Contenido',
     description: 'Desarrollador de software especializado en aplicaciones web con Next.js y React. Apasionado por la tecnología y la creación de soluciones innovadoras.',
     creator: '@juanluzon_dev',
-    images: ['/og-image.png'], // La misma imagen que en Open Graph
+    images: ['/og-image.webp'], // La misma imagen que en Open Graph
   },
 };
 

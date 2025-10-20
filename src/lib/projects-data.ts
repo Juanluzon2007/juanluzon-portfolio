@@ -23,7 +23,7 @@ export const projectsData: Project[] = [
         { name: "React", url: "https://react.dev/" },
         { name: "Tailwind CSS", url: "https://tailwindcss.com/" }
     ],
-    imageUrl: '/portfolio.png',
+    imageUrl: '/portfolio.webp',
     imageHint: 'website screenshot',
     projectUrl: 'https://juanluzon-portfolio.netlify.app/',
     isFeatured: true,

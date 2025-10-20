@@ -16,7 +16,7 @@ export type Certificate = {
 export const certificatesData: Certificate[] = [
   {
     id: 'bachiller',
-    imageUrl: '/certificate.png',
+    imageUrl: '/certificate.webp',
     isFeatured: true,
     es: {
       title: 'Bachiller en Humanidades y Ciencias Sociales',
