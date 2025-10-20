@@ -42,6 +42,9 @@ export default function RootLayout({
         <title>Juan Luzon | Portafolio</title>
         <meta name="description" content="Portafolio de Juan Luzon, estudiante de Ingeniería de Software apasionado por el desarrollo web." />
         <meta name="google-site-verification" content="KqCz5_lnKrgsMQkxNXH4ufSfFWOUSKqcpFW0MQaJJMc" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Juan Luzon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
