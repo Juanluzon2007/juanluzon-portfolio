@@ -1,11 +1,12 @@
-'use client';
+'use server';
 import { Code } from 'lucide-react';
 import { projectsData } from '@/lib/projects-data';
 import ProjectCard from '@/components/ProjectCard';
-import { useLanguage } from '@/context/language-context';
+import { getLanguage, getT } from '@/lib/language-server';
 
-export default function ProjectsPage() {
-  const { t } = useLanguage();
+export default async function ProjectsPage() {
+  const language = await getLanguage();
+  const t = await getT();
 
   return (
     <main className="flex min-h-screen flex-col pt-24">
@@ -18,7 +19,7 @@ export default function ProjectsPage() {
             </h1>
             <div className="space-y-16">
               {projectsData.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <ProjectCard key={project.id} project={project} language={language} t={t} />
               ))}
               {/* Aquí se añadirán más proyectos en el futuro */}
             </div>

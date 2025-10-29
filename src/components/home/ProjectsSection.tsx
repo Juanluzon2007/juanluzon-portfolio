@@ -1,12 +1,16 @@
-'use client';
+'use server';
 
 import { Code } from 'lucide-react';
 import { projectsData } from '@/lib/projects-data';
 import ProjectCard from '@/components/ProjectCard';
-import { useLanguage } from '@/context/language-context';
+import type { Language, TFunction } from '@/context/language-context';
 
-export default function ProjectsSection() {
-  const { t } = useLanguage();
+type Props = {
+  language: Language;
+  t: TFunction;
+};
+
+export default async function ProjectsSection({ language, t }: Props) {
   const featuredProjects = projectsData.filter((p) => p.isFeatured);
 
   return (
@@ -18,7 +22,7 @@ export default function ProjectsSection() {
         </h2>
         <div className="space-y-16">
           {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project.id} project={project} language={language} t={t} />
           ))}
         </div>
         <div className="text-center mt-16">

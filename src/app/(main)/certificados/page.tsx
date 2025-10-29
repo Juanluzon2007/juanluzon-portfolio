@@ -1,11 +1,12 @@
-'use client';
+'use server';
 import { GraduationCap } from 'lucide-react';
 import { certificatesData } from '@/lib/certificates-data';
 import CertificateCard from '@/components/CertificateCard';
-import { useLanguage } from '@/context/language-context';
+import { getLanguage, getT } from '@/lib/language-server';
 
-export default function CertificatesPage() {
-  const { t } = useLanguage();
+export default async function CertificatesPage() {
+  const language = await getLanguage();
+  const t = await getT();
   
   return (
     <main className="flex min-h-screen flex-col pt-24">
@@ -18,7 +19,7 @@ export default function CertificatesPage() {
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {certificatesData.map((certificate) => (
-                <CertificateCard key={certificate.id} certificate={certificate} />
+                <CertificateCard key={certificate.id} certificate={certificate} language={language} t={t} />
               ))}
             </div>
           </div>

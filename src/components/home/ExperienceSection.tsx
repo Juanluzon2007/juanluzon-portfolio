@@ -1,11 +1,15 @@
-'use client';
+'use server';
 
 import { Briefcase } from 'lucide-react';
 import { experienceData } from '@/lib/experience-data';
-import { useLanguage } from '@/context/language-context';
+import type { Language, TFunction } from '@/context/language-context';
 
-export default function ExperienceSection() {
-  const { language, t } = useLanguage();
+type Props = {
+  language: Language;
+  t: TFunction;
+};
+
+export default async function ExperienceSection({ language, t }: Props) {
   const featuredExperience = experienceData.filter((e) => e.isFeatured);
 
   return (

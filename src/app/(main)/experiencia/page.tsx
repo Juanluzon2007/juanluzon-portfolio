@@ -1,10 +1,11 @@
-'use client';
+'use server';
 import { Briefcase } from 'lucide-react';
 import { experienceData } from '@/lib/experience-data';
-import { useLanguage } from '@/context/language-context';
+import { getLanguage, getT } from '@/lib/language-server';
 
-export default function ExperiencePage() {
-  const { language, t } = useLanguage();
+export default async function ExperiencePage() {
+  const language = await getLanguage();
+  const t = await getT();
 
   return (
     <main className="flex min-h-screen flex-col items-center pt-24">

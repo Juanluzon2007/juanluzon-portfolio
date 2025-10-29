@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import type { Project } from '@/lib/projects-data';
-import { useLanguage } from '@/context/language-context';
+import type { Language, TFunction } from '@/context/language-context';
 
 type ProjectCardProps = {
   project: Project;
+  language: Language;
+  t: TFunction;
 };
 
-export default function ProjectCard({ project }: ProjectCardProps) {
-  const { language, t } = useLanguage();
+export default function ProjectCard({ project, language, t }: ProjectCardProps) {
   const currentProject = project[language];
 
   return (
@@ -20,7 +21,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           fill
           className="object-cover"
           data-ai-hint={project.imageHint}
-          onContextMenu={(e) => e.preventDefault()}
         />
       </div>
       <div className="md:order-2">

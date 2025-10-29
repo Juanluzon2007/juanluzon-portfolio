@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import type { Certificate } from '@/lib/certificates-data';
-import { useLanguage } from '@/context/language-context';
+import type { Language, TFunction } from '@/context/language-context';
 
 type CertificateCardProps = {
   certificate: Certificate;
+  language: Language;
+  t: TFunction;
 };
 
-const CertificateCard = ({ certificate }: CertificateCardProps) => {
-  const { language, t } = useLanguage();
+const CertificateCard = ({ certificate, language, t }: CertificateCardProps) => {
   const { href } = certificate;
   const currentCertificate = certificate[language];
 
@@ -28,7 +29,6 @@ const CertificateCard = ({ certificate }: CertificateCardProps) => {
               width={1280}
               height={905}
               className="w-full h-auto object-contain transition-transform duration-700 "
-              onContextMenu={(e) => e.preventDefault()}
             />
           </div>
           <div

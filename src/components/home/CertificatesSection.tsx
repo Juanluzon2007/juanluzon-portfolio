@@ -1,12 +1,16 @@
-'use client';
+'use server';
 
 import { GraduationCap } from 'lucide-react';
 import CertificateCard from '@/components/CertificateCard';
 import { certificatesData } from '@/lib/certificates-data';
-import { useLanguage } from '@/context/language-context';
+import type { Language, TFunction } from '@/context/language-context';
 
-export default function CertificatesSection() {
-  const { t } = useLanguage();
+type Props = {
+  language: Language;
+  t: TFunction;
+};
+
+export default async function CertificatesSection({ language, t }: Props) {
   const featuredCertificates = certificatesData.filter((c) => c.isFeatured);
 
   return (
@@ -18,7 +22,7 @@ export default function CertificatesSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredCertificates.map((certificate) => (
-            <CertificateCard key={certificate.id} certificate={certificate} />
+            <CertificateCard key={certificate.id} certificate={certificate} language={language} t={t} />
           ))}
         </div>
         <div className="text-center mt-16">

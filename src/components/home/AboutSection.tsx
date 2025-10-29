@@ -1,11 +1,15 @@
-'use client';
+'use server';
 
 import { User } from 'lucide-react';
-import { useLanguage } from '@/context/language-context';
 import { aboutContent } from '@/lib/home-data';
+import type { Language, TFunction } from '@/context/language-context';
 
-export default function AboutSection() {
-  const { language } = useLanguage();
+type Props = {
+  language: Language;
+  t: TFunction;
+};
+
+export default async function AboutSection({ language, t }: Props) {
   const content = aboutContent[language];
 
   return (
@@ -27,7 +31,6 @@ export default function AboutSection() {
                 playsInline
                 preload="auto"
                 className="rounded-md w-full h-auto"
-                onContextMenu={(e) => e.preventDefault()}
               />
             </div>
           </div>

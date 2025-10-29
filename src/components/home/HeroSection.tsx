@@ -1,11 +1,15 @@
-'use client';
+'use server';
 
-import { useLanguage } from '@/context/language-context';
 import Image from 'next/image';
 import { heroContent } from '@/lib/home-data';
+import type { Language, TFunction } from '@/context/language-context';
 
-export default function HeroSection() {
-  const { language, t } = useLanguage();
+type Props = {
+  language: Language;
+  t: TFunction;
+};
+
+export default async function HeroSection({ language, t }: Props) {
   const content = heroContent[language];
 
   return (
@@ -23,7 +27,6 @@ export default function HeroSection() {
               priority={true}
               className="object-cover"
               data-ai-hint="man portrait"
-              onContextMenu={(e) => e.preventDefault()}
             />
           </div>
           <div className="flex items-center gap-2 rounded-full bg-gray-800/90 px-3 py-1 text-xs text-green-300 border border-green-400/30">
