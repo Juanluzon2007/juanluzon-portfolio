@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
         { name: "React", url: "https://react.dev/" },
         { name: "Tailwind CSS", url: "https://tailwindcss.com/" }
     ],
-    imageUrl: '/portfolio.webp',
+    imageUrl: '/proyectos/1.jpg',
     imageHint: 'website screenshot',
     projectUrl: 'https://juanluzon-portfolio.netlify.app/',
     isFeatured: true, // Se mantiene 'true' como en tu ejemplo original
@@ -46,7 +46,7 @@ export const projectsData: Project[] = [
       { name: "CSS", url: "https://developer.mozilla.org/es/docs/Web/CSS" },
       { name: "JavaScript", url: "https://developer.mozilla.org/es/docs/Web/JavaScript" }
     ],
-    imageUrl: '/feliz_cumpleanos.webp',
+    imageUrl: '/proyectos/2.jpg',
     imageHint: 'website screenshot of a birthday card',
     projectUrl: 'https://juanluzon2007.github.io/madre/',
     isFeatured: false,
@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
       { name: "CSS3", url: "https://developer.mozilla.org/es/docs/Web/CSS" },
       { name: "JavaScript", url: "https://developer.mozilla.org/es/docs/Web/JavaScript" }
     ],
-    imageUrl: '/cuenta_regresiva.webp',
+    imageUrl: '/proyectos/3.jpg',
     imageHint: 'website screenshot of a countdown timer',
     projectUrl: 'https://juanluzon2007.github.io/shiny-barnacle/',
     isFeatured: false,

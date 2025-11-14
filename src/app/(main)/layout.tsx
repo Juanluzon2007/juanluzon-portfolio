@@ -1,10 +1,10 @@
 import Header from '@/components/Header';
 import FloatingNav from '@/components/FloatingNav';
-import SocialLinks from '@/components/SocialLinks';
 import { Toaster } from "@/components/ui/toast";
 import ClientOnly from '@/components/ClientOnly';
 import type { Metadata } from 'next';
 import MobileNav from '@/components/MobileNav';
+import Footer from '@/components/Footer'; // Import the new Footer component
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://juanluzon-portfolio.netlify.app/'),
@@ -56,17 +56,9 @@ export default function MainLayout({
       <div>
         {children}
       </div>
-      <footer className="w-full py-8 text-sm text-gray-400">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-6 lg:px-8">
-          <div className="text-center sm:text-left">
-            <p>&copy; {new Date().getFullYear()} Juan Luzon. Todos los derechos reservados.</p>
-            <p>Hecho con <span className="text-yellow-300">Next.js</span> y <span className="text-yellow-300">Tailwind CSS</span>.</p>
-          </div>
-          <ClientOnly>
-            <SocialLinks />
-          </ClientOnly>
-        </div>
-      </footer>
+      <ClientOnly>
+        <Footer />
+      </ClientOnly>
       <Toaster />
     </>
   );
