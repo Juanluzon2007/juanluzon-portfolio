@@ -41,20 +41,11 @@ const ProjectsIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 
-const CertificatesIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg {...props} id="Layer_1" viewBox="0 0 24 24" data-name="Layer 1">
-        <path fill="white" d="m18 13a3.987 3.987 0 0 0 -2 7.444v2.833a.721.721 0 0 0 1.231.51l.769-.768.769.768a.721.721 0 0 0 1.231-.51v-2.833a3.987 3.987 0 0 0 -2-7.444z"/>
-        <path fill="white" d="m12 17a5.993 5.993 0 0 1 9-5.191v-6.809a5.006 5.006 0 0 0 -5-5h-8a5.006 5.006 0 0 0 -5 5v12a5.006 5.006 0 0 0 5 5h6v-.54a5.975 5.975 0 0 1 -2-4.46zm-4-13h8a1 1 0 0 1 0 2h-8a1 1 0 0 1 0-2zm0 4h8a1 1 0 0 1 0 2h-8a1 1 0 0 1 0-2zm3 6h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2z"/>
-    </svg>
-);
-
-
 const navItems = [
     { href: '/#home', labelKey: 'home', es: 'Inicio', en: 'Home', icon: HomeIcon },
     { href: '/#about-me', labelKey: 'about', es: 'Sobre Mí', en: 'About', icon: AboutIcon },
     { href: '/experiencia', labelKey: 'experience', es: 'Experiencia', en: 'Experience', icon: ExperienceIcon },
     { href: '/proyectos', labelKey: 'projects', es: 'Proyectos', en: 'Projects', icon: ProjectsIcon },
-    { href: '/certificados', labelKey: 'certificates', es: 'Certificados', en: 'Certificates', icon: CertificatesIcon },
 ];
 
 const MobileNav = () => {

@@ -15,12 +15,6 @@ export const translations = {
       seeAll: 'Ver todos los proyectos',
       codeButton: 'Ver proyecto',
     },
-    certificates: {
-      featuredTitle: 'Certificados Destacados',
-      allTitle: 'Mis Certificados',
-      seeAll: 'Ver todos los certificados',
-      credentialButton: 'Ver Credencial Externa',
-    },
     footer: {
       rights: 'Todos los derechos reservados.',
       madeWith: 'Hecho con',
@@ -41,12 +35,6 @@ export const translations = {
       allTitle: 'My Projects',
       seeAll: 'See all projects',
       codeButton: 'View project',
-    },
-    certificates: {
-      featuredTitle: 'Featured Certificates',
-      allTitle: 'My Certificates',
-      seeAll: 'See all certificates',
-      credentialButton: 'View External Credential',
     },
     footer: {
       rights: 'All rights reserved.',

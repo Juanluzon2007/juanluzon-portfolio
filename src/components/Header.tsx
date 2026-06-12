@@ -15,7 +15,6 @@ const SECTIONS = [
   { id: 'experience', es_title: 'Experiencia', en_title: 'Experience' },
   { id: 'projects', es_title: 'Proyectos', en_title: 'Projects' },
   { id: 'about-me', es_title: 'Sobre Mí', en_title: 'About' },
-  { id: 'certificates', es_title: 'Certificados', en_title: 'Certificates' },
 ];
 
 
@@ -63,7 +62,7 @@ export default function Header() {
       } else {
         const path = pathname.split('/')[1];
         // Normalize path for comparison, e.g. 'experiencia' -> 'experience'
-        const normalizedPath = path === 'proyectos' ? 'projects' : path === 'certificados' ? 'certificates' : path === 'experiencia' ? 'experience' : path;
+        const normalizedPath = path === 'proyectos' ? 'projects' : path === 'experiencia' ? 'experience' : path;
         const currentSection = SECTIONS.find(s => s.id === normalizedPath);
         setActiveSection(currentSection?.id || null);
       }
@@ -82,7 +81,6 @@ export default function Header() {
     { href: "/experiencia", label: language === 'es' ? 'Experiencia' : 'Experience', sectionId: 'experience' },
     { href: "/proyectos", label: language === 'es' ? 'Proyectos' : 'Projects', sectionId: 'projects' },
     { href: isHomePage ? '#about-me' : '/#about-me', label: language === 'es' ? 'Sobre Mí' : 'About', sectionId: 'about-me' },
-    { href: "/certificados", label: language === 'es' ? 'Certificados' : 'Certificates', sectionId: 'certificates' },
   ];
 
   return (
