@@ -4,7 +4,7 @@ import type { Language, TFunction } from '@/context/language-context';
 
 // This function can be used in Server Components to get the language
 export async function getLanguage(): Promise<Language> {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const langCookie = cookieStore.get('lang');
   const lang = langCookie?.value;
   if (lang === 'es' || lang === 'en') {
